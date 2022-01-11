@@ -1,0 +1,47 @@
+.input{
+    width:250px;
+    padding-top:10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 10px;
+    border: 2px solid;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.button{
+   margin-top: 15px;
+   margin-bottom: 10px;
+   width: 100px;
+   padding-top: 6px;
+   padding-bottom: 6px;
+   color:white;
+   background-color: rgb(37, 111, 248);
+   border-radius: 6px;
+}
+label{
+    font-size: 150%;
+
+}
+h1{
+    padding-top: 50px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    font-size: 300%;
+}
+.acc
+{
+
+    margin-bottom: 80px;
+    margin-top: 8px;
+    color: blue;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

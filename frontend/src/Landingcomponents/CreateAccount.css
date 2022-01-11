@@ -1,0 +1,14 @@
+h1{
+    padding-bottom: 30px;
+}
+.wrap{
+    width:1200px;
+    display:inline-table;
+    margin-left: 120px;
+}
+.btn{
+
+    padding:10px;
+    margin-right: 15px;
+    margin-bottom: 50px;
+}
