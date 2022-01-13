@@ -1,8 +1,8 @@
 const Register = require("../models/userSchema.js")
 
-module.exports = signup = async(req,res) => {
-    try{
-        if(req.body.password===req.body.confirmpassword){
+module.exports = signup = async (req, res) => {
+    try {
+        if (req.body.password === req.body.confirmpassword) {
             const userRegister = new Register({
                 firstname: req.body.firstname,
                 lastname: req.body.lastname,
@@ -13,19 +13,20 @@ module.exports = signup = async(req,res) => {
             })
 
             const registered = await userRegister.save();
-            
+
             return res.status(200).json({
-                message:"User Registered"
+                message: "User Registered"
             });
         }
-        
-        else{
+
+        else {
             return res.status(300).json({
-                message:"Passwords are not matching"
+                message: "Passwords are not matching"
             });
         }
+
     }
-    catch (error){
+    catch (error) {
         console.log(error)
         return res.status(400).json({
             error
