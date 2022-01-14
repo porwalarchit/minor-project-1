@@ -1,9 +1,10 @@
 import React from 'react' ;
+import Abpic from './Abpic';
 
 const Aboutus = ()=>{
 return(
     <div>
-        <h1>Pending</h1>
+        <Abpic/>
     </div>
 )
 }

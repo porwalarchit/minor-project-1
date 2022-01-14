@@ -31,7 +31,7 @@ const productsData = [
     },
     {
         name: 'Visual Studio Code - Laptop Sticker',
-        image: '../../public/images/Stickerview4.jpg',
+        image: 'https://github.com/porwalarchit/minor-project/blob/master/Backend/public/images/Stickerview1.jpg?raw=true',
         price: 29.00,
         category: 'Stickers',
         description: 'VS Code is the most famous code editor in recent times. The amount of extensions it provides is mind blowing.',
