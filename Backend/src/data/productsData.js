@@ -1,7 +1,7 @@
 const productsData = [
     {
         name: 'React - Laptop Sticker',
-        image: '../../public/images/Stickerview1.jpg',
+        image: 'https://github.com/porwalarchit/minor-project/blob/master/Backend/public/images/Stickerview1.jpg?raw=true',
         price: 29.00,
         category: 'Stickers',
         description: 'React is a JavaScript library for creating user interfaces by Facebook and Instagram. This sticker is a must for all you React fans out there and rock star UI developers who are building reusable user interface components.',
@@ -11,7 +11,7 @@ const productsData = [
     },
     {
         name: 'NodeJs - Laptop Sticker',
-        image: '../../public/images/Stickerview2.jpg',
+        image: 'https://github.com/porwalarchit/minor-project/blob/master/Backend/public/images/Stickerview2.jpg?raw=true',
         price: 29.00,
         category: 'Stickers',
         description: 'World most popular javascript server side scripting framework. Here is a hex version sticker for NodeJS',
@@ -21,7 +21,7 @@ const productsData = [
     },
     {
         name: 'MongoDB - Laptop Sticker',
-        image: '../../public/images/Stickerview3.jpg',
+        image: 'https://github.com/porwalarchit/minor-project/blob/master/Backend/public/images/Stickerview3.jpg?raw=true',
         price: 29.00,
         category: 'Stickers',
         description: 'MongoDB is a general purpose, document-based, distributed database built for modern application developers and for the cloud era. No database is more productive to use. It is the world most popular database for modern apps.',
@@ -31,7 +31,7 @@ const productsData = [
     },
     {
         name: 'Visual Studio Code - Laptop Sticker',
-        image: 'https://github.com/porwalarchit/minor-project/blob/master/Backend/public/images/Stickerview1.jpg?raw=true',
+        image: 'https://github.com/porwalarchit/minor-project/blob/master/Backend/public/images/Stickerview4.jpg?raw=true',
         price: 29.00,
         category: 'Stickers',
         description: 'VS Code is the most famous code editor in recent times. The amount of extensions it provides is mind blowing.',
@@ -41,7 +41,7 @@ const productsData = [
     },
     {
         name: 'Postman - Laptop Sticker',
-        image: '../../public/images/Stickerview5.jpg',
+        image: 'https://github.com/porwalarchit/minor-project/blob/master/Backend/public/images/Stickerview5.jpg?raw=true',
         price: 29.00,
         category: 'Stickers',
         description: 'The best tool for doing easy API Development.',
@@ -51,7 +51,7 @@ const productsData = [
     },
     {
         name: 'Google Chrome - Laptop Sticker',
-        image: '../../public/images/Stickerview6.jpg',
+        image: 'https://github.com/porwalarchit/minor-project/blob/master/Backend/public/images/Stickerview6.jpg?raw=true',
         price: 29.00,
         category: 'Stickers',
         description: 'Google Chrome is a cross-platform web browser developed by Google.',
@@ -61,7 +61,7 @@ const productsData = [
     },
     {
         name: 'JavaScript - Laptop Sticker',
-        image: '../../public/images/Stickerview7.jpg',
+        image: 'https://github.com/porwalarchit/minor-project/blob/master/Backend/public/images/Stickerview7.jpg?raw=true',
         price: 29.00,
         category: 'Stickers',
         description: 'JavaScript is a flexible and powerful programming language that is implemented consistently by various web browsers.',
@@ -71,7 +71,7 @@ const productsData = [
     },
     {
         name: 'C++ - Laptop Sticker',
-        image: '../../public/images/Stickerview8.jpg',
+        image: 'https://github.com/porwalarchit/minor-project/blob/master/Backend/public/images/Stickerview8.jpg?raw=true',
         price: 29.00,
         category: 'Stickers',
         description: 'C++ is an object oriented language. One of the most powerful languages out there with amazing performance, efficiency and flexibility. This could be enabled due to the facility it provides for low-level memory manipulation',
@@ -81,7 +81,7 @@ const productsData = [
     },
     {
         name: 'Java - Laptop Sticker',
-        image: '../../public/images/Stickerview9.jpg',
+        image: 'https://github.com/porwalarchit/minor-project/blob/master/Backend/public/images/Stickerview9.jpg?raw=true',
         price: 29.00,
         category: 'Stickers',
         description: 'Java is a general-purpose programming language that is class-based, object-oriented, and designed to have as few implementation dependencies as possible - Wikipedia.',
@@ -91,7 +91,7 @@ const productsData = [
     },
     {
         name: 'Dev - Laptop Sticker',
-        image: '../../public/images/Stickerview10.jpg',
+        image: 'https://github.com/porwalarchit/minor-project/blob/master/Backend/public/images/Stickerview10.jpg?raw=true',
         price: 29.00,
         category: 'Stickers',
         description: 'This is a very minimalist sticker for all the developers out there! Keep it simple, keep rocking and keep creating beautiful stuff out there!',
@@ -101,7 +101,7 @@ const productsData = [
     },
     {
         name: 'CSS3 - Laptop Sticker',
-        image: '../../public/images/Stickerview11.jpg',
+        image: 'https://github.com/porwalarchit/minor-project/blob/master/Backend/public/images/Stickerview11.jpg?raw=true',
         price: 29.00,
         category: 'Stickers',
         description: 'CSS# has the ability to do amazing things like animation, shadows, etc, adds a whole new layer to any web application.',
@@ -111,7 +111,7 @@ const productsData = [
     },
     {
         name: 'HTML5 - Laptop Sticker',
-        image: '../../public/images/Stickerview12.jpg',
+        image: 'https://github.com/porwalarchit/minor-project/blob/master/Backend/public/images/Stickerview12.jpg?raw=true',
         price: 29.00,
         category: 'Stickers',
         description: 'HTML5 is a markup language used for structuring and presenting content for the World Wide Web and a core technology of the Internet.',
@@ -121,7 +121,7 @@ const productsData = [
     },
     {
         name: 'GitHub - Laptop Sticker',
-        image: '../../public/images/Stickerview13.jpg',
+        image: 'https://github.com/porwalarchit/minor-project/blob/master/Backend/public/images/Stickerview13.jpg?raw=true',
         price: 29.00,
         category: 'Stickers',
         description: 'GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.',
@@ -131,7 +131,7 @@ const productsData = [
     },
     {
         name: 'Stack Overflow - Laptop Sticker',
-        image: '../../public/images/Stickerview14.jpg',
+        image: 'https://github.com/porwalarchit/minor-project/blob/master/Backend/public/images/Stickerview14.jpg?raw=true',
         price: 29.00,
         category: 'Stickers',
         description: 'Stack Overflow is a question and answer website for professional and enthusiast programmers.',
@@ -141,7 +141,7 @@ const productsData = [
     },
     {
         name: 'Adobe Photoshop - Laptop Sticker',
-        image: '../../public/images/Stickerview15.jpg',
+        image: 'https://github.com/porwalarchit/minor-project/blob/master/Backend/public/images/Stickerview15.jpg?raw=true',
         price: 29.00,
         category: 'Stickers',
         description: 'Adobe Photoshop is a raster graphics editor developed and published by Adobe Inc. for Windows and macOS.',
@@ -151,7 +151,7 @@ const productsData = [
     },
     {
         name: 'Adobe Illustrator - Laptop Sticker',
-        image: '../../public/images/Stickerview16.jpg',
+        image: 'https://github.com/porwalarchit/minor-project/blob/master/Backend/public/images/Stickerview16.jpg?raw=true',
         price: 29.00,
         category: 'Stickers',
         description: 'Adobe Illustrator is a vector graphics editor and design program developed and marketed by Adobe Inc.',
@@ -161,7 +161,7 @@ const productsData = [
     },
     {
         name: 'Python - Laptop Sticker',
-        image: '../../public/images/Stickerview17.jpg',
+        image: 'https://github.com/porwalarchit/minor-project/blob/master/Backend/public/images/Stickerview17.jpg?raw=true',
         price: 29.00,
         category: 'Stickers',
         description: 'Python is an interpreted high-level general-purpose programming language.',
@@ -171,7 +171,7 @@ const productsData = [
     },
     {
         name: 'Internet Dinosaur - Laptop Sticker',
-        image: '../../public/images/Stickerview18.jpg',
+        image: 'https://github.com/porwalarchit/minor-project/blob/master/Backend/public/images/Stickerview18.jpg?raw=true',
         price: 29.00,
         category: 'Stickers',
         description: 'Dinosaur Game is an endless runner game originally built into Google Chrome.',
@@ -181,7 +181,7 @@ const productsData = [
     },
     {
         name: 'Android - Laptop Sticker',
-        image: '../../public/images/Stickerview19.jpg',
+        image: 'https://github.com/porwalarchit/minor-project/blob/master/Backend/public/images/Stickerview19.jpg?raw=true',
         price: 29.00,
         category: 'Stickers',
         description: 'Google actually did not start Android but acquired the company Android Inc. in 2005 at $50 million. Also, all the versions of Android are named in an alphabetical order. ',
@@ -191,7 +191,7 @@ const productsData = [
     },
     {
         name: 'Terminal - Laptop Sticker',
-        image: '../../public/images/Stickerview20.jpg',
+        image: 'https://github.com/porwalarchit/minor-project/blob/master/Backend/public/images/Stickerview20.jpg?raw=true',
         price: 29.00,
         category: 'Stickers',
         description: 'Terminals, also known as command lines or consoles, allow us to accomplish and automate tasks on a computer without the use of a graphical user interface.',
@@ -201,7 +201,7 @@ const productsData = [
     },
     {
         name: 'HTTPS - Laptop Sticker',
-        image: '../../public/images/Stickerview21.jpg',
+        image: 'https://github.com/porwalarchit/minor-project/blob/master/Backend/public/images/Stickerview21.jpg?raw=true',
         price: 29.00,
         category: 'Stickers',
         description: 'This is a standard everyone should comply with. Just put it on your device and make it secure.',
@@ -211,7 +211,7 @@ const productsData = [
     },
     {
         name: 'Google Cloud - Laptop Sticker',
-        image: '../../public/images/Stickerview22.jpg',
+        image: 'https://github.com/porwalarchit/minor-project/blob/master/Backend/public/images/Stickerview22.jpg?raw=true',
         price: 29.00,
         category: 'Stickers',
         description: 'A suite of different cloud services provided by Google. ',
@@ -221,7 +221,7 @@ const productsData = [
     },
     {
         name: 'Just Do it - Laptop Sticker',
-        image: '../../public/images/Stickerview23.jpg',
+        image: 'https://github.com/porwalarchit/minor-project/blob/master/Backend/public/images/Stickerview23.jpg?raw=true',
         price: 29.00,
         category: 'Stickers',
         description: 'When you want to do something just do it, no matter what people say because no one has the right to give you the approval to do something.',
@@ -231,7 +231,7 @@ const productsData = [
     },
     {
         name: 'Like - Laptop Sticker',
-        image: '../../public/images/Stickerview24.jpg',
+        image: 'https://github.com/porwalarchit/minor-project/blob/master/Backend/public/images/Stickerview24.jpg?raw=true',
         price: 29.00,
         category: 'Stickers',
         description: 'The heart emoji is used in warm emotional contexts. It can be used to express gratitude, love, happiness, or hope.',
