@@ -1,17 +1,18 @@
 import React from 'react'
 import {Card, Button,Container} from 'react-bootstrap';
-import Landingpage from './Landingpage';
+import ProductPage from './ProductPage';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 function ProductCard({prod}) {
+   const [prd,setProd] = useState(prod);
     return (
-    <Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src={prod.image} />
+    <Card style={{ width: '22rem', height: '32rem',marginBottom:"15px"}}>
+  <Card.Img variant="top" src={prod.image}  style={{ height: '25rem'}}/>
   <Card.Body>
-    <Card.Title>{prod.name}</Card.Title>
-    <Card.Text>
-     {prod.description}
-    </Card.Text>
-    <Button variant="primary">View Product</Button>
+    <Card.Title  style={{fontSize:"17px"}}>{prod.name}</Card.Title>
+    <Card.Text>Price: ${prod.price}</Card.Text>
+    <Link to={{pathname:"/Product",state:{productPrice:prd.price }}}><Button variant="primary" >View Product</Button></Link>
   </Card.Body>
   </Card>
     )

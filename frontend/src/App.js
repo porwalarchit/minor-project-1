@@ -10,6 +10,7 @@ import TandC from "./Landingcomponents/TandC";
 import Reviews from "./Landingcomponents/Reviews";
 import MyCart from "./Landingcomponents/myCart";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ProductPage from "./Landingcomponents/ProductPage";
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path= "/terms" exact element = {<TandC/>}/>
         <Route path= "/reviews" exact element = {<Reviews/>}/>
         <Route path= "/Cart" exact element = {<MyCart/>}/>
+        <Route path= "/Product" exact element = {<ProductPage/>}/>
       </Routes>
       <Footer/>
       </BrowserRouter>

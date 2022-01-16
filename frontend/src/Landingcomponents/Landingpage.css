@@ -1,0 +1,12 @@
+.head{
+    transition: font-size 2s;
+}
+.field
+{
+    opacity:0.9;
+    background-color: white;
+    font-weight: bolder;
+}
+.head:hover{
+    font-size: 100px;
+}

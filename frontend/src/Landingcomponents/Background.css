@@ -1,0 +1,10 @@
+.background{
+    background-image: url('./backgroundimage.jpg');
+}
+.field
+{
+    opacity:0.9;
+    background-color: white;
+    font-weight: bold;
+    color: black;
+}

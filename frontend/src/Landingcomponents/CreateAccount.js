@@ -57,8 +57,9 @@ function CreateAccount() {
   }
 
   return (
-      <div>
-        <h1>CREATE ACCOUNT</h1>
+      <div className='background'>
+        <div className='field'>
+        <h1 style = {{fontWeight:"bold"}}>CREATE ACCOUNT</h1>
     <Form className="wrap" noValidate >
       <Row className="mb-3">
         <Form.Group as={Col} md="4" controlId="validationCustom01">
@@ -135,6 +136,7 @@ function CreateAccount() {
       <Button className = "btn" type="submit" onClick={signin} >Submit</Button>
       <Link className = "btn" to = "/myaccount">Sign In</Link>
     </Form>
+    </div>
     </div>
   );
 }

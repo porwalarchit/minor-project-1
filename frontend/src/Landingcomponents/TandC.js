@@ -1,9 +1,11 @@
 import React from 'react'
+import './Background.css'
 
 function TandC() {
     return (
-        <div>
-            <h1>Terms of Service and Policies</h1>
+        <div className='background' >
+            <div className='field'>
+            <h1 style = {{fontWeight:"bold"}}>Terms of Service and Policies</h1>
             <h5 style={{padding : "5px"}}>This website is operated by Stick It Up. Throughout the site, the terms “we”, “us” and “our” refer to Stick It Up. Stick It Up offers this website, including all information, tools, and services available from this site to you, the user, conditioned upon your acceptance of all terms, conditions, policies, and notices stated here.
 <br/>
 By visiting our site and/ or purchasing something from us, you engage in our “Service” and agree to be bound by the following terms and conditions (“Terms of Service”, “Terms”), including those additional terms and conditions and policies referenced herein and/or available by hyperlink. These Terms of Service apply to all users of the site, including without limitation users who are browsers, vendors, customers, merchants, and/ or contributors of content.
@@ -203,7 +205,7 @@ SECTION 19 - CHANGES TO TERMS OF SERVICE
 You can review the most current version of the Terms of Service at any time at this page.
 
 We reserve the right, at our sole discretion, to update, change, or replace any part of these Terms of Service by posting updates and changes to our website. It is your responsibility to check our website periodically for changes. Your continued use of or access to our website or the Service following the posting of any changes to these Terms of Service constitutes acceptance of those changes.</h5>
-<br/><br/><br/><br/>   </div>
+<br/><br/><br/><br/>   </div></div>
     )
 }
 

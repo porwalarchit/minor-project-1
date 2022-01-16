@@ -104,7 +104,7 @@ const productsData = [
         image: 'https://github.com/porwalarchit/minor-project/blob/master/Backend/public/images/Stickerview11.jpg?raw=true',
         price: 29.00,
         category: 'Stickers',
-        description: 'CSS# has the ability to do amazing things like animation, shadows, etc, adds a whole new layer to any web application.',
+        description: 'CSS3 has the ability to do amazing things like animation, shadows, etc, adds a whole new layer to any web application.',
         countInStocks: 10,
         ratings: 4.5,
         numOfReviews: 15
