@@ -19,8 +19,8 @@ app.post("/register",signup);
 app.post("/login",signin);
 
 app.post("/addproducts",addProduct);
-app.post("/products",getProducts)
-app.post("/products/:id", getProductsbyId);
+app.get("/products",getProducts)
+app.get("/products/:id", getProductsbyId);
 
 app.listen(port, ()=>{
     console.log(`Server running at port ${port}`);

@@ -27,7 +27,7 @@ function App() {
         <Route path= "/terms" exact element = {<TandC/>}/>
         <Route path= "/reviews" exact element = {<Reviews/>}/>
         <Route path= "/Cart" exact element = {<MyCart/>}/>
-        <Route path= "/Product" exact element = {<ProductPage/>}/>
+        <Route path= "/Product/:id" exact element = {<ProductPage/>}/>
       </Routes>
       <Footer/>
       </BrowserRouter>

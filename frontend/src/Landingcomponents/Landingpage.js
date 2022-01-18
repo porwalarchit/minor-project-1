@@ -10,7 +10,7 @@ function Landingpage() {
     const productsServer = "http://localhost:2000/products";
 
     const productCall = ()=>{
-        axios.post(productsServer)
+        axios.get(productsServer)
         .then(async (response)=> {
             await setProducts(response.data)
 

@@ -5,17 +5,17 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
 function ProductCard({prod}) {
-   const [prd,setProd] = useState(prod);
     return (
     <Card style={{ width: '22rem', height: '32rem',marginBottom:"15px"}}>
   <Card.Img variant="top" src={prod.image}  style={{ height: '25rem'}}/>
   <Card.Body>
     <Card.Title  style={{fontSize:"17px"}}>{prod.name}</Card.Title>
-    <Card.Text>Price: ${prod.price}</Card.Text>
-    <Link to={{pathname:"/Product",state:{productPrice:prd.price }}}><Button variant="primary" >View Product</Button></Link>
+    <Card.Text>Price: ₹{prod.price}</Card.Text>
+    <Link to={`/product/${prod._id}`}><Button variant="primary" >View Product</Button></Link>
   </Card.Body>
   </Card>
     )
 }
 
 export default ProductCard
+
