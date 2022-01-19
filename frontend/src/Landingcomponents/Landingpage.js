@@ -26,7 +26,7 @@ function Landingpage() {
      <Container>
          <div style={{marginTop:"2%",backgroundImage: `url(${backgroundImage})`, paddingTop:"50px",paddingBottom:"40px"}}>
         <div className='field' >
-        <Carousel style={{width:"100%",height:"40%",marginLeft:"6%",marginRight:"2%"}}>
+        <Carousel style={{width:"100%",height:"40%"}}>
   <Carousel.Item interval={2000}>
     <Row>
     <Col  style={{height:"380px"}}>

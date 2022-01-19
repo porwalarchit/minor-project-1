@@ -1,52 +1,44 @@
-import React, { useState } from 'react'
-import { Container,Table } from 'react-bootstrap';
+import axios from 'axios';
+import React, { useState,useEffect } from 'react'
+import { Container } from 'react-bootstrap';
 import NavBar from '../layoutcomponents/NavBar';
+import CartProd from './CartProd';
+import './Landingpage.css'
+import backgroundImage from './backgroundimage.jpg'
 
 const MyCart = ()=> {
+    let sum=0;
     const [product, setProduct] = useState([])
+    const totsum = ()=>{
+        product.map((prod)=>(
+            sum = sum+ prod.price
+    ))
+    }
+    useEffect(() => {
+      const config = {
+          headers:{
+        authorization:localStorage.getItem("jwtToken")
+          }
+    };
+    axios.get("http://localhost:2000/user/cart", config).then(async (res) => {
+        setProduct(res.data.cartItems)
+        console.log(res);
+    }
+    ).catch((err) => { console.error(err); })
+    }, [])
+    totsum();
     return (
         <div>
             <NavBar/>
-    <Container>
-            <div style={{fontSize:"380%"}}><b>Your Cart</b></div>
-    <Table striped bordered hover size="sm">
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td colSpan={2}>Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</Table>
-</Container>
-            {/* <Container style={{marginBottom:"3%"}}>
-
-            {products.map((product)=>(
-                    <CartProd key = {product.id} prod = {product}></CartProd>
+    <Container className= " my-5">
+            <div style={{fontSize:"380%",marginBottom:"5%",textAlign:"center"}}><b>Your Cart</b></div>
+            {product.map((prod)=>(
+                    <CartProd key = {prod._id} prod = {prod}></CartProd>
 
             ))}
-        </Container> */}
-        </div>
+            <div style={{fontSize:"380%",marginTop:"2%",marginBottom:"5%",textAlign:"right"}}><b>Total: </b> ₹{sum}</div>
+</Container>
+</div>
     )
 }
 

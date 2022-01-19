@@ -4,7 +4,6 @@ import React, { useEffect,useState } from 'react'
 import { Link } from 'react-router-dom'
 import "./NavBar.css"
 import {Navbar,Nav,Container,NavDropdown, Row, Col} from "react-bootstrap";
-import logo from './logo.jpeg';
 import Header from './Header'
 import axios from 'axios'
 
@@ -42,8 +41,8 @@ function NavBar() {
       </Nav.Link> */}
       <Nav.Link className='flex-row d-flex '>
             <div className = "px-2">Welcome {name} </div> 
-            <Link to="/myaccount" className = "link p-1"><FontAwesomeIcon style={{fontSize:"145%"}}  icon= {faUser} /></Link>
-            <Link to="/Cart" className = "link p-1"><FontAwesomeIcon style={{fontSize:"145%"}} icon= {faShoppingCart} /></Link>
+            <Link to="/myaccount" className = "link px-2"><FontAwesomeIcon style={{fontSize:"145%"}}  icon= {faUser} /></Link>
+            <Link to="/Cart" className = "link px-2"><FontAwesomeIcon style={{fontSize:"145%"}} icon= {faShoppingCart} /></Link>
       </Nav.Link>
     </Nav>
   </Navbar.Collapse>
