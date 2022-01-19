@@ -1,6 +1,7 @@
 import React from "react";
 import emailjs from "emailjs-com"
 import './Background.css'
+import NavBar from "../layoutcomponents/NavBar";
 
 const Contactus = ()=>{
     const handleSubmit = (event) => {
@@ -8,6 +9,9 @@ const Contactus = ()=>{
         emailjs.sendForm('service_ba05nde','template_n358vgs',event.target,'user_XQZLfdP4na11L1AnqPxQG').then(res=>{console.log(res);}).catch(err=>{console.log(err);});
       }
     return(
+      <div>
+        <NavBar/>
+     
       <div className = "background" >
         <div className = "field" style = {{justifyContent : "center"}}>
             <h1 style = {{fontWeight:"bold"}}>Contact us</h1>
@@ -32,6 +36,7 @@ London Rubber Company (India) Ltd. Pallavaram(Madras)<br/></h6><br/>
     <button type = "submit"style={{padding : "0.5%", paddingLeft : "1.5%", paddingRight : "1.5%", backgroundColor:"rgb(37, 111, 248)"
    ,borderRadius: "5px",color:"white", marginBottom:"25px"}}>Send</button>
     </form>
+  </div>
   </div>
   </div>
     )

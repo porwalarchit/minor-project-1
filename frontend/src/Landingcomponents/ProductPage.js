@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios';
 import { Row, Container, Col, ListGroup,Button } from 'react-bootstrap'
+import NavBar from '../layoutcomponents/NavBar';
 
 function ProductPage() {
     const { id } = useParams();
@@ -14,6 +15,9 @@ function ProductPage() {
         }).catch(err => { console.error(err); })
     }, [])
     return (
+        <div>
+            <NavBar/>
+        
         <Container className="my-5">
             <Row >
                 <Col>
@@ -59,6 +63,7 @@ function ProductPage() {
                 </Col>
             </Row>
         </Container>
+        </div>
     )
 }
 

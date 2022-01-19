@@ -3,6 +3,7 @@ import {Card, Button,Container} from 'react-bootstrap';
 import ProductPage from './ProductPage';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import NavBar from '../layoutcomponents/NavBar';
 
 function ProductCard({prod}) {
     return (

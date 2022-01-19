@@ -5,6 +5,7 @@ import "./CreateAccount.css"
 import {Link} from "react-router-dom"
 import axios from 'axios'
 import {useNavigate} from 'react-router-dom'
+import NavBar from '../layoutcomponents/NavBar';
 
 function CreateAccount() {
 
@@ -28,8 +29,9 @@ function CreateAccount() {
   const [email,setEmail] = useState("") ;
   const [password,setPassword] = useState("") ;
   const [conPass,setConPass] = useState("") ;
+  const [msg,setMsg] = useState('') ;
 
-  const signin = (e) => {
+  const signup = (e) => {
     e.preventDefault() ; 
 
     const config = { 
@@ -43,20 +45,35 @@ function CreateAccount() {
 
     console.log(config)
 
-    axios.post("http://localhost:2000/register",config).then(res=>{
+    axios.post("http://localhost:2000/register",config).then( async res=>{
 
       console.log(res) ;
 
       if(res.status === 200){
-        navigate("/")
-      }
-
+        await localStorage.setItem('jwtToken',res.data.jwt_token);
+        navigate("/") ;
+       }
+       else if(res.status === 300)
+       {
+         setMsg(res.data.message);
+       }
+       else if(res.status === 210)
+       {
+        setMsg(res.data.msg);
+       }
+       else
+       {
+         setMsg("Internal Error Occurred");
+       }
     })
 
 
   }
 
   return (
+    <div>
+      <NavBar/>
+    
       <div className='background'>
         <div className='field'>
         <h1 style = {{fontWeight:"bold"}}>CREATE ACCOUNT</h1>
@@ -132,10 +149,12 @@ function CreateAccount() {
           feedback="You must agree before submitting."
           feedbackType="invalid"
         />
+        <div style={{color:"#fc4103",fontSize:"140%"}}> {msg.length ==0?'':msg}</div>
       </Form.Group>
-      <Button className = "btn" type="submit" onClick={signin} >Submit</Button>
+      <Button className = "btn" type="submit" onClick={signup} >Submit</Button>
       <Link style={{color:"aliceblue"}}className = "btn" to = "/myaccount">Sign In</Link>
     </Form>
+    </div>
     </div>
     </div>
   );

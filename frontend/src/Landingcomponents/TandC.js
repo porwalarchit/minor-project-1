@@ -1,8 +1,11 @@
 import React from 'react'
+import NavBar from '../layoutcomponents/NavBar'
 import './Background.css'
 
 function TandC() {
     return (
+        <div>
+        <NavBar/>
         <div className='background'>
             <div className='field'  style={{paddingLeft:"1.3%",paddingRight:"1.3%"}}>
             <h1 style = {{fontWeight:"bold"}}>Terms of Service and Policies</h1>
@@ -205,7 +208,7 @@ SECTION 19 - CHANGES TO TERMS OF SERVICE
 You can review the most current version of the Terms of Service at any time at this page.
 
 We reserve the right, at our sole discretion, to update, change, or replace any part of these Terms of Service by posting updates and changes to our website. It is your responsibility to check our website periodically for changes. Your continued use of or access to our website or the Service following the posting of any changes to these Terms of Service constitutes acceptance of those changes.</h5>
-<br/><br/><br/><br/>   </div></div>
+<br/><br/><br/><br/>   </div></div></div>
     )
 }
 
