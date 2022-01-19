@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
-import {Form,Row,Col,Button,InputGroup} from "react-bootstrap";
+import {Form,Row,Col,Button,InputGroup, Container} from "react-bootstrap";
 import "./CreateAccount.css"
 import {Link} from "react-router-dom"
 import axios from 'axios'
@@ -60,7 +60,7 @@ function CreateAccount() {
       <div className='background'>
         <div className='field'>
         <h1 style = {{fontWeight:"bold"}}>CREATE ACCOUNT</h1>
-    <Form className="wrap" noValidate >
+    <Form className="wrap justify-content-center align-items-center " noValidate >
       <Row className="mb-3">
         <Form.Group as={Col} md="4" controlId="validationCustom01">
           <Form.Label>First name</Form.Label>
@@ -86,7 +86,7 @@ function CreateAccount() {
         </Form.Group>
         <Form.Group as={Col} md="4" controlId="validationCustomUsername">
           <Form.Label>Username</Form.Label>
-          <InputGroup hasValidation>
+          <InputGroup  hasValidation>
             <InputGroup.Text id="inputGroupPrepend">@</InputGroup.Text>
             <Form.Control
               type="text"
@@ -134,7 +134,7 @@ function CreateAccount() {
         />
       </Form.Group>
       <Button className = "btn" type="submit" onClick={signin} >Submit</Button>
-      <Link className = "btn" to = "/myaccount">Sign In</Link>
+      <Link style={{color:"aliceblue"}}className = "btn" to = "/myaccount">Sign In</Link>
     </Form>
     </div>
     </div>
