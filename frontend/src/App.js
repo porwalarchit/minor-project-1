@@ -8,7 +8,7 @@ import Aboutus from "./Landingcomponents/Aboutus";
 import Contactus from "./Landingcomponents/Contactus";
 import TandC from "./Landingcomponents/TandC";
 import Reviews from "./Landingcomponents/Reviews";
-import MyCart from "./Landingcomponents/myCart";
+import MyCart from "./Landingcomponents/MyCart";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ProductPage from "./Landingcomponents/ProductPage";
 
@@ -17,7 +17,6 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-      <NavBar/>
       <Routes>
         <Route path= "/" exact element = {<Landingpage/>}/>
         <Route path= "/myaccount" exact element = {<MyAccount/>}/>

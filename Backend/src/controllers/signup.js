@@ -6,7 +6,7 @@ module.exports = signup = async (req, res) => {
             const userRegister = new Register({
                 firstname: req.body.firstname,
                 lastname: req.body.lastname,
-                username: req.body.username,
+                username: req.body.username, 
                 email: req.body.email,
                 password: req.body.password,
                 // confirmpassword: req.body.confirmpassword

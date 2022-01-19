@@ -3,12 +3,14 @@ import "./MyAccounts.css"
 import {Link,useNavigate} from 'react-router-dom'
 import axios from 'axios';
 import "./Background.css"
+import NavBar from '../layoutcomponents/NavBar';
 
 
 function MyAccount() {
 
   const [username,setUsername] = useState('') ;
   const [password,setPassword] = useState('') ;
+  const [msg,setMsg] = useState('') ;
   let navigate = useNavigate() ; 
 
   const login = (e) => {
@@ -20,23 +22,28 @@ function MyAccount() {
       password:password
     }
 
-    console.log(config)
 
-    axios.post("http://localhost:2000/login",config).then(res=>{
-      console.log(res) ;
+    axios.post("http://localhost:2000/login",config).then( async res=>{
 
-      if(res.status === 201){
+      if(res.status === 200){
+        await localStorage.setItem('jwtToken',res.data.jwt_token);
         navigate("/") ;
-      }
-
+       }
+       else
+       {
+         setMsg(res.data.message);
+       }
+      
     })
 
   }
-
   const handleSubmit = (event) => {
       event.preventDefault();
-    }
+  }
     return (
+      <div>
+        <NavBar/>
+      
         <div className='background'>
       <div className='field'>
           <h1 style = {{fontWeight:"bold"}}>LOGIN</h1>
@@ -49,11 +56,12 @@ function MyAccount() {
     <label>Password:</label>
     <input className= "input" type="password" name="last-name" placeholder="Password" value={password} onChange={(e)=> setPassword(e.target.value)} />
   </div>
-
+  {msg.length===0?"":<div style={{color:"#fad6cd",marginLeft:"7%",fontSize:"110%"}}>{msg}</div>}
     <button className="button" type="submit" onClick={login} >Sign In</button>
   <Link to = "/createaccount" className="acc">Create Account</Link>
 </form>
       </div>
+        </div>
         </div>
     )
 }

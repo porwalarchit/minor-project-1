@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react'
+import NavBar from '../layoutcomponents/NavBar'
 import backgroundImage from './backgroundimage.jpg'
 import axios from 'axios';
 import  { Row,Col, Container,Carousel } from 'react-bootstrap';
@@ -20,8 +21,9 @@ function Landingpage() {
     useEffect(()=>{productCall();},[]);
 
     return (
+      <div>
+        <NavBar/>
      <Container>
-         
          <div style={{marginTop:"2%",backgroundImage: `url(${backgroundImage})`, paddingTop:"50px",paddingBottom:"40px"}}>
         <div className='field' >
         <Carousel style={{width:"100%",height:"40%",marginLeft:"6%",marginRight:"2%"}}>
@@ -92,6 +94,7 @@ function Landingpage() {
 
         </Container>
         </Container>  
+        </div>
     )
 }
 
