@@ -3,8 +3,8 @@ import './Background.css'
 
 function TandC() {
     return (
-        <div className='background' >
-            <div className='field'>
+        <div className='background'>
+            <div className='field'  style={{paddingLeft:"1.3%",paddingRight:"1.3%"}}>
             <h1 style = {{fontWeight:"bold"}}>Terms of Service and Policies</h1>
             <h5 style={{padding : "5px"}}>This website is operated by Stick It Up. Throughout the site, the terms “we”, “us” and “our” refer to Stick It Up. Stick It Up offers this website, including all information, tools, and services available from this site to you, the user, conditioned upon your acceptance of all terms, conditions, policies, and notices stated here.
 <br/>

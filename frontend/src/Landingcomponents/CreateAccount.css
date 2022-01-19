@@ -2,9 +2,10 @@ h1{
     padding-bottom: 30px;
 }
 .wrap{
-    width:1200px;
+    width:90%;
     display:inline-table;
-    margin-left: 120px;
+    margin-left: 4%;
+    margin-right:1%;
 }
 .btn{
 

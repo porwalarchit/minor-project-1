@@ -3,9 +3,10 @@
 }
 .field
 {
-    opacity:0.9;
-    background-color: white;
+    opacity: 0.95;
+    background-color: rgba(21, 23, 37, 0.753);
     font-weight: bolder;
+    color: rgb(254, 254, 255);
 }
 .head:hover{
     font-size: 100px;

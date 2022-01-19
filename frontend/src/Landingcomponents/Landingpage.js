@@ -20,46 +20,65 @@ function Landingpage() {
     useEffect(()=>{productCall();},[]);
 
     return (
-     <div>  
+     <Container>
          
-         <div style={{backgroundImage: `url(${backgroundImage})`, paddingTop:"50px",paddingBottom:"40px"}}>
+         <div style={{marginTop:"2%",backgroundImage: `url(${backgroundImage})`, paddingTop:"50px",paddingBottom:"40px"}}>
         <div className='field' >
-        <Carousel>
+        <Carousel style={{width:"100%",height:"40%",marginLeft:"6%",marginRight:"2%"}}>
   <Carousel.Item interval={2000}>
+    <Row>
+    <Col  style={{height:"380px"}}>
     <img
-      className="d-block w-100"
+      className="d-block w-90"
       src= "https://ih1.redbubble.net/image.394119567.2874/st,small,507x507-pad,600x600,f8f8f8.u4.jpg"
       alt="First slide"
-      style={{height: "300px",width:"100px"}}
+      style={{height: "100%"}}
     />
-    <h3>First slide label</h3>
-      <h2>Nulla vitae elit libero, a pharetra augue mollis interdum.</h2>
+    </Col>
+    <Col >
+      <h1 style={{fontSize:"550%",fontWeight:"bolder"}}>Latest Arrival!!!</h1><br/>
+      <div style={{fontSize:"300%"}}>GET YOUR C++ STICKER NOW!!</div> 
+      </Col>
+      </Row>
   </Carousel.Item>
   <Carousel.Item interval={2000}>
+  <Row>
+    <Col style={{height:"380px"}}>
     <img
-      className="d-block w-100"
+      className="d-block w-90"
       src="https://dotbadges.com/wp-content/uploads/2021/05/Stickerview1-167.webp"
       alt="Second slide"
-      style={{height: "300px",width:"100px"}}
+      style={{height: "100%"}}
     />
+    </Col>
+    <Col >
+    <h1 style={{fontSize:"550%",fontWeight:"bolder"}}>Latest Arrival!!!</h1><br/>
+      <div style={{fontSize:"300%"}}>IN LOVE WITH REACT? GET YOUR REACT STICKER NOW!!</div> 
+    </Col>
+      </Row>
   </Carousel.Item>
   <Carousel.Item  interval={2000}>
+  <Row>
+    <Col  style={{height:"380px"}}>
     <img
-      className="d-block w-100"
+      className="d-block w-90 "
       src="https://ih1.redbubble.net/image.318707736.3796/st,small,507x507-pad,600x600,f8f8f8.jpg"
-      alt="Third slide" style={{height: "300px",width:"100px"}}
+      alt="Third slide" style={{height: "100%"}}
     />
+    </Col>
+    <Col>
+    <h1 style={{fontSize:"550%",fontWeight:"bolder"}}>Latest Arrival!!!</h1><br/>
+      <div style={{fontSize:"300%"}}>GET YOUR NEW NODE.JS STICKER NOW!!</div> 
+    </Col>
+      </Row>
   </Carousel.Item>
 </Carousel>
         </div>
         </div>
-        <div style= {{padding:"20px",color:"#e8e8e3",textShadow:"2px 2px 1px #00a835",fontSize:"55px", fontWeight:"bolder"}}>
-            Design your own sticker
-            </div>
-            <div style= {{color:"#e8e8e3",textShadow:"2px 2px 1px #00a835",textAlign:"center",fontSize:"45px", fontWeight:"bolder"}}>Create Your Own Custom</div>
- <div style= {{color:"#485254",textShadow:"2px 2px 1px #00beed",textAlign:"center",fontSize:"70px", fontWeight:"bolder",}}>Stickers</div>   
+       
+ <div style= {{marginBottom:"6%",marginTop:"3%",color:"#000000",textShadow:"2px 2px 2px #db1709",textAlign:"center",fontSize:"70px", fontWeight:"bolder",}}>Buy your Stickers Here!</div>   
           
-        <Container>
+        <Container style={{marginBottom:"3%"}}>
 
             <Row className='d-flex align-items-center justify-content-center' >
 
@@ -72,7 +91,7 @@ function Landingpage() {
             </Row>
 
         </Container>
-        </div> 
+        </Container>  
     )
 }
 
