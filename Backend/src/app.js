@@ -10,6 +10,8 @@ const getProducts = require("./controllers/getProducts.js");
 const getProductsbyId = require("./controllers/getProductsbyId.js");
 const cors = require("cors");
 const {validateSignupRequest, validateSigninRequest, isRequestValidated} = require("./controllers/validator.js");
+const addtoCart = require("./controllers/addtoCart.js");
+const getCartItems = require("./controllers/getCartItems.js");
 
 require('dotenv').config();
 
@@ -20,7 +22,6 @@ app.use(cors("*"))
 
 conn();
 
-// app.get("/isauthenticated", authenticateToken);
 app.get("/getuserdetails", authenticateToken, getUserDetails)
 app.post("/register", validateSignupRequest, isRequestValidated, signup);
 app.post("/login",validateSigninRequest, isRequestValidated, signin);
@@ -29,6 +30,8 @@ app.post("/addproducts",addProduct);
 app.get("/products",getProducts);
 app.get("/products/:id", getProductsbyId);
 
+app.post("/user/addtocart/:id",authenticateToken, addtoCart);
+app.get("/user/cart", authenticateToken, getCartItems);
 app.listen(port, ()=>{
     console.log(`Server running at port ${port}`);
 })
