@@ -1,4 +1,5 @@
 const userSchema = require("../models/userSchema.js");
+const generateToken = require("./generateToken.js");
 const bcrypt = require("bcrypt");
 
 module.exports = signin = async(req, res) =>{
@@ -13,7 +14,8 @@ module.exports = signin = async(req, res) =>{
             }
             if(data){
                 return res.status(201).json({
-                    message: "Login Successful"
+                    message: "Login Successful",
+                    jwt_token: generateToken(user.username)
                 })
             }
             else{

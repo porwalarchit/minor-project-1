@@ -47,12 +47,12 @@ function ProductPage() {
                         <ListGroup.Item><div className='py-3' style={{ fontFamily: "serif", fontSize: "120%" }}>{pro.description}</div>
                         </ListGroup.Item>
                         <ListGroup.Item >
-                                <b style={{fontSize:"105%"}}>Additional Information: </b>
-                                  <ul style={{listStyle:'square',color:"black",paddingBottom:"0%",paddingTop:"0%"}}>
-                                   <li style={{color:"black",fontSize:"100%"}}> Matte Finished</li>
-                                    <li style={{color:"black",fontSize:"100%"}}>Self Adhesive</li>
-                                    <li style={{color:"black",fontSize:"100%"}}>WEIGHT: 0.05 g</li>
-                                    <li style={{color:"black",fontSize:"100%"}}>DIMENSIONS: 6.35 × 6.35 × 1 cm</li>
+                                <b style={{fontSize:"100%"}}>ADDITIONAL INFORMATION: </b>
+                                  <ul style={{listStyle:'circle',paddingBottom:"0%",paddingTop:"0%"}}>
+                                   <li style={{color:"black",fontSize:"105%"}}> Matte Finished</li>
+                                    <li style={{color:"black",fontSize:"105%"}}>Self Adhesive</li>
+                                    <li style={{color:"black",fontSize:"105%"}}><b>Weight:</b> 0.05 g</li>
+                                    <li style={{color:"black",fontSize:"105%"}}><b>Dimensions:</b> 6.35 × 6.35 × 1 cm</li>
                                    </ul>
                         </ListGroup.Item>
                     </ListGroup>
