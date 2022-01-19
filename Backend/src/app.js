@@ -9,6 +9,7 @@ const addProduct = require("./controllers/addProduct.js");
 const getProducts = require("./controllers/getProducts.js");
 const getProductsbyId = require("./controllers/getProductsbyId.js");
 const cors = require("cors");
+const {validateSignupRequest, validateSigninRequest, isRequestValidated} = require("./controllers/validator.js");
 
 require('dotenv').config();
 
@@ -19,10 +20,10 @@ app.use(cors("*"))
 
 conn();
 
-app.get("/isauthenticated", authenticateToken);
+// app.get("/isauthenticated", authenticateToken);
 app.get("/getuserdetails", authenticateToken, getUserDetails)
-app.post("/register",signup);
-app.post("/login",signin);
+app.post("/register", validateSignupRequest, isRequestValidated, signup);
+app.post("/login",validateSigninRequest, isRequestValidated, signin);
 
 app.post("/addproducts",addProduct);
 app.get("/products",getProducts);

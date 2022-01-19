@@ -1,6 +1,4 @@
 const userSchema = require("../models/userSchema.js");
-// const jwt = require("jsonwebtoken");
-// const authenticateToken = require("./authenticateToken.js");
 
 module.exports = getUserDetails = (req, res) => {
     userSchema.findOne({username:req.user.username}).exec((err, user) => {
