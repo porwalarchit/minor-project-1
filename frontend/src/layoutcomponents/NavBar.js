@@ -1,7 +1,7 @@
-import {  faSearch, faShoppingCart, faUser } from '@fortawesome/free-solid-svg-icons'
+import {  faSearch, faShoppingCart, faUser,faSignOutAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useEffect,useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Navigate, useNavigate } from 'react-router-dom'
 import "./NavBar.css"
 import {Navbar,Nav,Container,NavDropdown, Row, Col} from "react-bootstrap";
 import Header from './Header'
@@ -9,7 +9,11 @@ import axios from 'axios'
 
 function NavBar() {
   const [name, setName] = useState('Guest')
-  
+  const logout=()=>{
+    localStorage.removeItem('jwtToken');
+    setName('Guest');
+     window.location.reload(false) ;
+  }
   const getUserDetail = ()=>{
     const config = {
       headers: {
@@ -43,6 +47,7 @@ function NavBar() {
             <div className = "px-2">Welcome {name} </div> 
             <Link to="/myaccount" className = "link px-2"><FontAwesomeIcon style={{fontSize:"145%"}}  icon= {faUser} /></Link>
             <Link to="/Cart" className = "link px-2"><FontAwesomeIcon style={{fontSize:"145%"}} icon= {faShoppingCart} /></Link>
+            <div className = "link px-2">{name=='Guest'?'':<FontAwesomeIcon style={{fontSize:"145%"}}  icon= {faSignOutAlt}  onClick={logout}/>}</div>
       </Nav.Link>
     </Nav>
   </Navbar.Collapse>

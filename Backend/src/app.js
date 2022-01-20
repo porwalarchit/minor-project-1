@@ -12,6 +12,7 @@ const cors = require("cors");
 const {validateSignupRequest, validateSigninRequest, isRequestValidated} = require("./controllers/validator.js");
 const addtoCart = require("./controllers/addtoCart.js");
 const getCartItems = require("./controllers/getCartItems.js");
+const deletefromCart = require("./controllers/deletefromCart.js");
 
 require('dotenv').config();
 
@@ -32,6 +33,8 @@ app.get("/products/:id", getProductsbyId);
 
 app.post("/user/addtocart/:id",authenticateToken, addtoCart);
 app.get("/user/cart", authenticateToken, getCartItems);
+app.delete("/user/cart/delete/:id", authenticateToken, deletefromCart);
+
 app.listen(port, ()=>{
     console.log(`Server running at port ${port}`);
 })
