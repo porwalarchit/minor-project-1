@@ -3,8 +3,8 @@ import React, { useState,useEffect } from 'react'
 import { Container } from 'react-bootstrap';
 import NavBar from '../layoutcomponents/NavBar';
 import CartProd from './CartProd';
-import './Landingpage.css'
-import backgroundImage from './backgroundimage.jpg'
+import {faShoppingCart,faMoneyBill} from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const MyCart = ()=> {
     let sum=0;
@@ -28,15 +28,16 @@ const MyCart = ()=> {
     }, [])
     totsum();
     return (
-        <div>
+        <div style={{backgroundColor:"#fcfaf5"}}>
             <NavBar/>
-    <Container className= " my-5">
-            <div style={{fontSize:"380%",marginBottom:"5%",textAlign:"center"}}><b>Your Cart</b></div>
+    <Container>
+            <div style={{fontSize:"380%",paddingTop:"2%",textAlign:"center"}}><b>Your Cart</b> <FontAwesomeIcon icon={faShoppingCart} /></div>
+            <h2 style={{fontSize:"150%",paddingBottom:"5%",textAlign:"center"}}>({product.length==0?"Your cart is Empty!":"Total items: "+product.length})</h2>
             {product.map((prod)=>(
                     <CartProd key = {prod._id} prod = {prod}></CartProd>
 
             ))}
-            <div style={{fontSize:"380%",marginTop:"2%",marginBottom:"5%",textAlign:"right"}}><b>Total: </b> ₹{sum}</div>
+            <div style={{paddingRight:"5%",fontSize:"380%",paddingTop:"2%",paddingBottom:"5%",textAlign:"right",color:"red"}}><FontAwesomeIcon style={{color:"green"}} icon={faMoneyBill} /> <b style={{color:"black"}}> Total: </b> ₹{sum}</div>
 </Container>
 </div>
     )

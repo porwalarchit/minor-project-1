@@ -2,6 +2,8 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios';
+import {faMoneyBill} from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Row, Container, Col, ListGroup, Button } from 'react-bootstrap'
 import NavBar from '../layoutcomponents/NavBar';
 
@@ -33,10 +35,10 @@ function ProductPage() {
     }
     console.log(msg)
     return (
-        <div>
+        <div style={{backgroundColor:"#fcfaf5"}}>
             <NavBar />
 
-            <Container className="my-5">
+            <Container className="py-5">
                 <Row >
                     <Col>
                         <ListGroup>
@@ -50,10 +52,10 @@ function ProductPage() {
                                 <Row>
                                     <Col style={{ height: "130px" }}>
                                         <div className='d-flex flex-row'>
-                                            <div style={{ fontSize: "150%", fontWeight: "bold" }} className='mx-2'>Price:
+                                            <div style={{ fontSize: "150%", fontWeight: "bold" }} className='mx-2'> <FontAwesomeIcon style={{color:"green"}} icon={faMoneyBill} /> Price:
                                             </div>
                                             <div>
-                                                <p style={{ fontSize: "200%", color: "red" }}>₹{pro.price}</p>(Inclusive of Taxes)
+                                            <p style={{ fontSize: "200%", color: "red" }}>₹{pro.price}</p>(Inclusive of Taxes)
                                             </div>
                                         </div>
 
@@ -71,7 +73,7 @@ function ProductPage() {
                             </ListGroup.Item>
                             <ListGroup.Item >
                                 <b style={{ fontSize: "100%" }}>ADDITIONAL INFORMATION: </b>
-                                <ul style={{ listStyle: 'circle', paddingBottom: "0%", paddingTop: "0%" }}>
+                                <ul style={{ listStyle: 'circle', paddingTop: "0%" }}>
                                     <li style={{ color: "black", fontSize: "105%" }}> Matte Finished</li>
                                     <li style={{ color: "black", fontSize: "105%" }}>Self Adhesive</li>
                                     <li style={{ color: "black", fontSize: "105%" }}><b>Weight:</b> 0.05 g</li>

@@ -25,7 +25,7 @@ function NavBar() {
         <div>
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
   <Container >
-  <Navbar.Brand  href="#home"><Link to = "/" ><Header /></Link></Navbar.Brand>
+  <Nav><Link to = "/" ><Header /></Link></Nav>
    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav"> 
     {/* <Nav className="me-auto">
