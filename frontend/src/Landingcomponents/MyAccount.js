@@ -29,9 +29,13 @@ function MyAccount() {
         await localStorage.setItem('jwtToken',res.data.jwt_token);
         navigate("/") ;
        }
+       else if(res.status === 201)
+       {
+         setMsg('Invalid login credentials');
+       }
        else
        {
-         setMsg(res.data.message);
+        setMsg(res.data.message);
        }
       
     })
