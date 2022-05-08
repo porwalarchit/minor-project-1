@@ -5,8 +5,8 @@ const bcrypt = require("bcrypt");
 module.exports = signin = (req, res) => {
   userSchema.findOne({ username: req.body.username }).exec((error, user) => {
     if (user) {
-      if (bcrypt.compare(req.body.password, user.hash_password)) {
-        const user_payload = { username: req.body.username }; //* payload
+      if (user.authenticate(req.body.password)) {
+        // const user_payload = { username: req.body.username }; //* payload
 
         return res.status(200).json({
           jwt_token: generateToken(user.username),
